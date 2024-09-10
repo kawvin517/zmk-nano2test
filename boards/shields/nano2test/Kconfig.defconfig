@@ -1,6 +1,8 @@
 # Copyright (c) 2023 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
+if SHIELD_NANO2TEST
+
 config ZMK_KEYBOARD_NAME
     default "nano2test"
 
@@ -39,3 +41,4 @@ endchoice
 endif # LVGL
 
 endif # ZMK_DISPLAY
+endif
