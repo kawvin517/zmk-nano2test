@@ -1,0 +1,43 @@
+{
+  "id": "nano2test",
+  "name": "nano2test",
+  "layouts": {
+    "default_transform": {
+      "name": "default_transform",
+      "layout": [
+        { "row": 0, "col": 0, "x": 0, "y": 0, "label":  "0,0" },
+        { "row": 0, "col": 1, "x": 1, "y": 0, "label":  "1,1" },
+        { "row": 0, "col": 2, "x": 2, "y": 0, "label":  "2,2" },
+        { "row": 0, "col": 3, "x": 3, "y": 0, "label":  "3,3" },
+        { "row": 0, "col": 4, "x": 4, "y": 0, "label":  "4,4" },
+        { "row": 0, "col": 5, "x": 5, "y": 0, "label":  "5,5" },
+      
+        { "row": 1, "col": 0, "x": 0, "y": 1, "label":  "0,6" },
+        { "row": 1, "col": 1, "x": 1, "y": 1, "label":  "1,7" },
+        { "row": 1, "col": 2, "x": 2, "y": 1, "label":  "2,8" },
+        { "row": 1, "col": 3, "x": 3, "y": 1, "label":  "3,9" },
+        { "row": 1, "col": 4, "x": 4, "y": 1, "label": "4,10" },
+        { "row": 1, "col": 5, "x": 5, "y": 1, "label": "5,11" },
+      
+        { "row": 2, "col": 0, "x": 0, "y": 2, "label": "0,12" },
+        { "row": 2, "col": 1, "x": 1, "y": 2, "label": "1,13" },
+        { "row": 2, "col": 2, "x": 2, "y": 2, "label": "2,14" },
+      
+        { "row": 3, "col": 0, "x": 0, "y": 3, "label": "0,15" },
+        { "row": 3, "col": 1, "x": 1, "y": 3, "label": "1,16" },
+        { "row": 3, "col": 2, "x": 2, "y": 3, "label": "2,17" },
+        { "row": 3, "col": 3, "x": 3, "y": 3, "label": "3,18" }
+      ]
+    }
+  },
+  "sensors": [
+    {
+      "ref": "left_encoder",
+      "name": "left_encoder",
+      "identifier": "left_encoder",
+      "compatible": "alps,ec11",
+      "label": "LEFT_ENCODER",
+      "enabled": true
+    }
+  ]
+}

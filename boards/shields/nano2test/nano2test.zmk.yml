@@ -1,0 +1,12 @@
+file_format: "1"
+id: nano2test
+name: nano2test
+type: shield
+url: https://github.com/kawvin/zmk-config
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - encoder
+  - underglow
