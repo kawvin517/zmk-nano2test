@@ -10,3 +10,5 @@ features:
   - display
   - encoder
   - underglow
+siblings:
+  - nano2test
