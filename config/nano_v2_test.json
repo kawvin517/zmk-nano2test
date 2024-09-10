@@ -1,6 +1,6 @@
 {
-  "id": "nano2test",
-  "name": "nano2test",
+  "id": "nano_v2_test",
+  "name": "nano_v2_test",
   "layouts": {
     "default_transform": {
       "name": "default_transform",

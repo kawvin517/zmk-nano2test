@@ -19,5 +19,4 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: nano2test
-    
+    shield: nano_v2_test

@@ -1,10 +1,10 @@
 # Copyright (c) 2023 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_NANO2TEST
+if SHIELD_NANO_V2_TEST
 
 config ZMK_KEYBOARD_NAME
-    default "nano2test"
+    default "nano_v2_test"
 
 config ZMK_RGB_UNDERGLOW
     select WS2812_STRIP
