@@ -1,0 +1,35 @@
+/*
+ * Copyright (c) 2023 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/rgb.h>
+
+
+/ {
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        qwerty_layer {
+//  ---------------------------------------------------------------------------------
+//  |TAB |Q|W|E|R|T|    |Y|U|I|O|P   |LBKT|
+//  |CAPS|A|S|D|F|G|    |H|J|K|L|SEMI|SQT |
+
+
+            bindings = <
+&kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T          &kp Y  &kp U  &kp I  &kp O  &kp P     &kp LBKT  
+&kp CAPS  &kp A  &kp S  &kp D  &kp F  &kp G          &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp SQT   
+
+            >;
+            label = "Qwerty";
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+ 
+    };
+};

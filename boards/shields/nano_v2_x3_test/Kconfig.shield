@@ -1,0 +1,10 @@
+# Copyright (c) 2023 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_NANO_V2_X3_TEST_LEFT
+    def_bool $(shields_list_contains,nano_v2_x3_test_left)
+config SHIELD_NANO_V2_X3_TEST_RIGHT
+    def_bool $(shields_list_contains,nano_v2_x3_test_right)
+config SHIELD_NANO_V2_X3_TEST_PAD
+    def_bool $(shields_list_contains,nano_v2_x3_test_pad)
+
