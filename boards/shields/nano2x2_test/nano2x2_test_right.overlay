@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "nano_v2_x2_test.dtsi"
+#include "nano2x2_test.dtsi"
 #include <dt-bindings/led/led.h>
 
 &pinctrl {

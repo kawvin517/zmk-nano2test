@@ -1,17 +1,17 @@
 # Copyright (c) 2023 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_NANO_V2_X3_TEST_LEFT
+if SHIELD_NANO2X3_TEST_LEFT
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 
 config ZMK_KEYBOARD_NAME
-    default "nano_v2_x3_test"
+    default "nano2x3_test"
 endif
 
-if SHIELD_NANO_V2_X3_TEST_LEFT || SHIELD_NANO_V2_X3_TEST_RIGHT || SHIELD_NANO_V2_X3_TEST_PAD
+if SHIELD_NANO2X3_TEST_LEFT || SHIELD_NANO2X3_TEST_RIGHT || SHIELD_NANO2X3_TEST_PAD
 
 config ZMK_SPLIT
     default y

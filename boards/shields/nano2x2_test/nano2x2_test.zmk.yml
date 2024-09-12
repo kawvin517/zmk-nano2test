@@ -1,6 +1,6 @@
 file_format: "1"
-id: nano_v2_x2_test
-name: nano_v2_x2_test
+id: nano2x2_test
+name: nano2x2_test
 type: shield
 url: https://github.com/kawvin517/zmk-nano2test
 requires: [pro_micro]
@@ -11,5 +11,5 @@ features:
   - encoder
   - underglow
 siblings:
-  - nano_v2_x2_test_left
-  - nano_v2_x2_test_right
+  - nano2x2_test_left
+  - nano2x2_test_right

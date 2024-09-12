@@ -4,19 +4,19 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "nano_v2_x3_test.dtsi"
+#include "nano2x2_test.dtsi"
 #include <dt-bindings/led/led.h>
 
 &pinctrl {
     // Other pinctrl definitions for other hardware
-    i2c1_default: i2c1_default {
+    i2c0_default: i2c0_default {
         group1 {
             psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
                     <NRF_PSEL(TWIM_SCL, 0, 20)>;
         };
     };
 
-    i2c1_sleep: i2c1_sleep {
+    i2c0_sleep: i2c0_sleep {
         group1 {
             psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
                     <NRF_PSEL(TWIM_SCL, 0, 20)>;
@@ -38,18 +38,18 @@
     };
 };
 
-&i2c1 {
+&i2c0 {
 	status = "okay";
 	//compatible = "nordic,nrf-twi";
-	pinctrl-0 = <&i2c1_default>;
-	pinctrl-1 = <&i2c1_sleep>;
+	pinctrl-0 = <&i2c0_default>;
+	pinctrl-1 = <&i2c0_sleep>;
 	pinctrl-names = "default", "sleep";
     
-	oled1: ssd1306@3c {
+	oled: ssd1306@3c {
 		compatible = "solomon,ssd1306fb";   //0.91   0.96
         //compatible = "sinowealth,sh1106";   //1.30
 		reg = <0x3c>;
-		label = "RIGHT_DISPLAY";
+		label = "LEFT_DISPLAY";
 		width = <128>;
 		height = <64>;
 		segment-offset = <0>;   //0.91   0.96
@@ -92,7 +92,7 @@
 / {
     chosen {
         zmk,kscan = &kscan;
-        zephyr,display = &oled1;
+        zephyr,display = &oled;
         zmk,underglow = &led_strip;
     };
 
@@ -127,7 +127,7 @@
             ;
     };
 
-    right_encoder: right_encoder {
+    left_encoder: left_encoder {
         compatible = "alps,ec11";
         steps = <80>;
         a-gpios = <&gpio0  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
@@ -139,14 +139,11 @@
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         //sensors = <&left_encoder1 &right_encoder1>;
-        sensors = <&right_encoder>;
+        sensors = <&left_encoder>;
         triggers-per-rotation = <20>;
     };
 };
 
-&default_transform {
-    col-offset = <12>;
-};
 
 
 
