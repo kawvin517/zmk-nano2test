@@ -20,15 +20,19 @@ config ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
     select LV_FONT_UNSCII_8
     select ZMK_WPM
 
-choice ZMK_DISPLAY_WORK_QUEUE
-    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
-endchoice
+config ZMK_DONGLE_DISPLAY_DONGLE_BATTERY
+    bool "Show also the battery level of the dongle"
+    depends on BT && (!ZMK_SPLIT_BLE || ZMK_SPLIT_ROLE_CENTRAL)
 
-#config CONFIG_ZMK_IS_DONGLE_MODE
-#    bool "Enable dongle or not"
+config ZMK_DONGLE_DISPLAY_MAC_MODIFIERS
+    bool "Use MacOS modifier symbols instead of the Windows symbols"
 
 #config CONFIG_ZMK_WIDGET_BATTERY_STATUS_SHOW_PERIPHERAL
 #   default y
+
+choice ZMK_DISPLAY_WORK_QUEUE
+    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+endchoice
 
 config LV_Z_MEM_POOL_SIZE
     default 8192

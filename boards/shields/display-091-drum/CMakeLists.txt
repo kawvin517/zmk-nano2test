@@ -11,6 +11,7 @@ if(CONFIG_ZMK_DISPLAY AND CONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM AND ((NOT CONF
     zephyr_library_sources(widgets/battery_status_sym.c)
     zephyr_library_sources(widgets/bongo_drum.c)
     zephyr_library_sources(widgets/bongo_drum_images.c)
+    target_sources_ifdef(CONFIG_ZMK_HID_INDICATORS app PRIVATE widgets/hid_indicators.c)
     zephyr_library_sources(widgets/layer_status.c)
     zephyr_library_sources(widgets/layer_status_sym.c)
     zephyr_library_sources(widgets/modifiers.c)
